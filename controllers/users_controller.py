@@ -3,3 +3,6 @@ from models.user import User
 
 
 users_blueprint = Blueprint("user", __name__)
+
+@users_blueprint.route()
+def
