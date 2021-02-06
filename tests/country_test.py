@@ -1,10 +1,13 @@
 import unittest
 from models.country import Country
 
-class TestContry(unittest.TestCase):
+class TestCountry(unittest.TestCase):
     
     def setUp(self):
         self.country = Country("Spain", "ES")
 
     def test_for_name(self):
-        self.assertEqual("Benicassim", self.festival.name)
+        self.assertEqual("Spain", self.country.name)
+
+    def test_for_country_code(self):
+        self.assertEqual("ES", self.country.country_code)
