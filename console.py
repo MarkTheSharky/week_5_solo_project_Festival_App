@@ -14,3 +14,10 @@ import repositories.user_repository as user_repository
 
 country_1 = Country("Serbia", "RS")
 country_repository.save(country_1)
+
+# print(country_repository.select_all())
+# print(country_repository.select_buy_id(10).name)
+country_repository.delete_by_id(10)
+
+country_update1 = Country("Serbiaaaaaa", "EK", 33)
+country_repository.update(country_update1)
