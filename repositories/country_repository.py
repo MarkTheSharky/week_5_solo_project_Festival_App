@@ -21,7 +21,7 @@ def select_all():
         countries.append(country)
     return countries
 
-def select_buy_id(id):
+def select_by_id(id):
     country = None
     sql = "SELECT * FROM countries WHERE id = %s"
     values = [id]

@@ -8,8 +8,8 @@ import repositories.country_repository as country_repository
 import repositories.festival_repository as festival_repository
 import repositories.user_repository as user_repository
 
-# country_repository.delete_all()
-# festival_repository.delete_all()
+country_repository.delete_all()
+festival_repository.delete_all()
 # user_repository.delete_all()
 
 country_1 = Country("Serbia", "RS")
@@ -24,8 +24,12 @@ festival_repository.save(festival_2)
 
 
 # print(country_repository.select_all())
-# print(country_repository.select_buy_id(10).name)
-country_repository.delete_by_id(10)
+# print(country_repository.select_by_id(10).name)
+# country_repository.delete_by_id(10)
+
+print(festival_repository.select_all())
+# print(festival_repository.select_by_id(15).name)
 
 country_update1 = Country("Serbiaaaaaa", "EK", 33)
 country_repository.update(country_update1)
+
