@@ -4,5 +4,5 @@ from models.country import Country
 
 countries_blueprint = Blueprint("country", __name__)
 
-@countries_blueprint.route()
-def 
+# @countries_blueprint.route()
+# def 

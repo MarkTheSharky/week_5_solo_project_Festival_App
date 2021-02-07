@@ -4,5 +4,5 @@ from models.festival import Festival
 
 festivals_blueprint = Blueprint("festival", __name__)
 
-@festivals_blueprint.route()
-def
+# @festivals_blueprint.route()
+# def

@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 
-from controllers.festival_controller import festival_blueprint
+from controllers.festivals_controller import festivals_blueprint
 from controllers.countries_controller import countries_blueprint
 from controllers.users_controller import users_blueprint
 
