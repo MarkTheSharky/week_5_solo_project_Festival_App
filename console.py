@@ -10,26 +10,39 @@ import repositories.user_repository as user_repository
 
 festival_repository.delete_all()
 country_repository.delete_all()
-# user_repository.delete_all()
+user_repository.delete_all()
 
 country_1 = Country("Serbia", "RS")
 country_repository.save(country_1)
 country_2 = Country("United Kingdom", "UK")
 country_repository.save(country_2)
 
-# festival_1 = Festival("TITP", country_2)
-# festival_repository.save(festival_1)
+festival_1 = Festival("TITP", country_2)
+festival_repository.save(festival_1)
 festival_2 = Festival("Exit Festival", country_1)
 festival_repository.save(festival_2)
 
+user_1 = User("Mark", "Burns", 33)
+user_repository.save(user_1)
+user_2 = User("Heather", "MacSween", 33)
+user_repository.save(user_2)
 
 # print(country_repository.select_all())
 # print(country_repository.select_by_id(10).name)
 # country_repository.delete_by_id(10)
 
-print(festival_repository.select_all())
+# print(festival_repository.select_all())
 # print(festival_repository.select_by_id(22).name)
+# festival_repository.delete_by_id(3)
+
+# print(user_repository.select_all())
+# print(user_repository.select_by_id(4))
+# user_repository.delete_by_id(2)
+
 
 country_update1 = Country("Serbiaaaaaa", "EK", 33)
 country_repository.update(country_update1)
+
+# festival_update1 = Festival("T In The Park", 'UK' )
+# festival_repository.update(festival_update1)
 
