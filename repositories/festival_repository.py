@@ -23,8 +23,27 @@ def select_all():
         festivals.append(festival)
     return festivals
 
+def select_by_id(id):
+    festival = None
+    sql = "SELECT * FROM festival WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
 
+    if result is not None:
+        country = country_repository.select_by_id(result['country_id'])
+        festival = Festival(result['name'], country, result['id'])
+    return festival
 
 def delete_all():
     sql = "DELETE FROM festivals"
     run_sql(sql)
+
+def delete_by_id(id):
+    sql = "DELETE FROM festivals WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+
+def update(festival):
+    sql = "UPDATE festivals SET (name, country_id) = (%s, %s) WHERE id = %s"
+    values = [festival.name, festival.country.id, festival.id]
+    run_sql(sql, values)
