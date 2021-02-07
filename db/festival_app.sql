@@ -50,4 +50,16 @@ INSERT INTO countries (name, country_code) VALUES ('Slovakia', 'SK');
 INSERT INTO countries (name, country_code) VALUES ('Slovenia', 'SI');
 INSERT INTO countries (name, country_code) VALUES ('Spain', 'ES');
 INSERT INTO countries (name, country_code) VALUES ('Swedan', 'SE');
-INSERT INTO countries (name, country_code) VALUES ('United Kingdom', 'UK')
+INSERT INTO countries (name, country_code) VALUES ('United Kingdom', 'UK');
+INSERT INTO countries (name, country_code) VALUES ('Serbia', 'RS');
+
+INSERT INTO festivals (name, country_id) VALUES ('Benicassim', 26);
+INSERT INTO festivals (name, country_id) VALUES ('Exit Festival', 29);
+INSERT INTO festivals (name, country_id) VALUES ('T In The Park', 28);
+INSERT INTO festivals (name, country_id) VALUES ('Lollapalooza', 11);
+
+INSERT INTO users (first_name, last_name, age) VALUES ('Mark', 'Burns', 33);
+INSERT INTO users (first_name, last_name, age) VALUES ('Heather', 'MacSween', 33);
+INSERT INTO users (first_name, last_name, age) VALUES ('Stewart', 'McGowan', 33);
+INSERT INTO users (first_name, last_name, age) VALUES ('Matt', 'Mclister', 33);
+INSERT INTO users (first_name, last_name, age) VALUES ('Kerr', 'McAndrew', 33);

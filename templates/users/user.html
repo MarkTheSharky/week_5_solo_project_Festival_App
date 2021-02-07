@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div>
+    <h2>{{user.first_name}} {{user.last_name}}</h2>
+</div>
+
+<div>
+    <h4>Going To</h4>
+    {% for festival in festivals %}
+        <div>
+            <p>{{festival.name}}</p>
+        </div>
+    {% endfor %}
+</div>
+
+<div>
+    <h4>Been To</h4>
+</div>
+
+{% endblock content %}

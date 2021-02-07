@@ -2,8 +2,14 @@
 
 {% block content %}
 
+
+{% for user in users %}
 <div>
-    
+    <p>{{user.first_name}} {{user.last_name}}</p>
+    <p><a href="">View Festivals Page</a></p>
 </div>
-    
+{% endfor %}
+
+ 
 {% endblock content %}
+
