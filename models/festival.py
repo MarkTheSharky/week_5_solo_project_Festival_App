@@ -1,6 +1,8 @@
 class Festival:
-    def __init__(self, name):
+    def __init__(self, name, country, id=None):
         self.name = name
+        self.country = country
+        self.id = id
 
     # def add_festival():
 

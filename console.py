@@ -14,6 +14,14 @@ import repositories.user_repository as user_repository
 
 country_1 = Country("Serbia", "RS")
 country_repository.save(country_1)
+country_2 = Country("United Kingdom", "UK")
+country_repository.save(country_2)
+
+festival_1 = Festival("TITP", country_2)
+festival_repository.save(festival_1)
+festival_2 = Festival("Exit Festival", country_1)
+festival_repository.save(festival_2)
+
 
 # print(country_repository.select_all())
 # print(country_repository.select_buy_id(10).name)
