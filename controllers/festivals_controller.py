@@ -18,7 +18,7 @@ def create_festival():
     countries = country_repository.select_all()
     return render_template("festivals/create_festival.html", countries=countries, title="Create New Festival")
 
-# ADD NEW FESTIVAL
+# CREATE NEW FESTIVAL "POST"
 @festivals_blueprint.route("/festivals", methods=['POST'])
 def new_festival():
     name = request.form['name']
@@ -34,7 +34,7 @@ def edit_festival(id):
     countries = country_repository.select_all()
     return render_template("festivals/edit_festival.html", festival=festival, countries=countries, title="Edit Festival")
 
-# FESTIVAL EDIT "POST"
+# # EDIT EXISTING FESTIVAL "POST"
 @festivals_blueprint.route("/festivals/<id>", methods=['POST'])
 def edit_festival_post(id):
     name = request.form['name']
@@ -42,12 +42,3 @@ def edit_festival_post(id):
     festival = Festival(name, country, id)
     festival_repository.update(festival)
     return redirect("/festivals")
-
-
-
-
-# @festivals_blueprint.route("/festivals/<name>", methods=['GET'])
-# def view_festival(name):
-#     #take name and get id from it
-#     festival = festival_repository.select_by_id()
-#     return render_template("festivals/festival.html", festival=festival)
