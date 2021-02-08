@@ -27,6 +27,13 @@ def new_festival():
     festival_repository.save(festival)
     return redirect("/festivals")
 
+# EDIT EXISTING FESTIVAL
+@festivals_blueprint.route("/festivals/edit_festival/<id>", methods=['GET'])
+def edit_festival(id):
+    festival = festival_repository.select_by_id(id)
+    countries = country_repository.select_all()
+    return render_template("festivals/edit_festival.html", festival=festival, countries=countries, title="Edit Festival")
+
 
 
 

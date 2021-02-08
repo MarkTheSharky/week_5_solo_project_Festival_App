@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+    <div>
+        <h3>Edit Festival</h3>
+        <form action="/festivals/{{festival.id}}" method="POST">
+            <label for="festival">Festival Name:</label>
+                <input type="text" id="festival" name="festival" value="{{festival.name}}" required readonly>
+            <select name="country_id" id="country">
+            {% for country in countries %}
+                <option value="{{country.id}}">{{country.name}}</option>
+            {% endfor %}
+            </select>
+        </form>
+    </div>
+
+{% endblock content %}

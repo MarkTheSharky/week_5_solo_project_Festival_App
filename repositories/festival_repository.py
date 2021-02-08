@@ -25,7 +25,7 @@ def select_all():
 
 def select_by_id(id):
     festival = None
-    sql = "SELECT * FROM festival WHERE id = %s"
+    sql = "SELECT * FROM festivals WHERE id = %s"
     values = [id]
     result = run_sql(sql, values)[0]
 
