@@ -9,7 +9,8 @@
                 <input type="text" id="festival" name="festival" value="{{festival.name}}" required readonly>
             <select name="country_id" id="country">
             {% for country in countries %}
-                <option value="{{country.id}}">{{country.name}}</option>
+                <option value="{{country.id}}"
+                    {% if festival.country.id == country.id %} selected="selected"{% endif %}>{{country.name}}</option>
             {% endfor %}
             </select>
         </form>
