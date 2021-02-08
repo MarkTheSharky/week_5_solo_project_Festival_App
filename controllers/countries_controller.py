@@ -11,3 +11,5 @@ def view_all():
     countries = country_repository.select_all()
     festivals = festival_repository.select_all()
     return render_template("countries/countries.html", countries=countries, festivals=festivals, title="Browse By Country")
+
+# @countries_blueprint.route

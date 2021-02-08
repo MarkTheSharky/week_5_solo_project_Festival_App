@@ -6,10 +6,11 @@
 {% for user in users %}
 <div>
     <p>{{user.first_name}} {{user.last_name}}</p>
-    <p><a href="">View Festivals Page</a></p>
+    <p><a href="users/{{user.id}}">View Festivals Page</a></p>
 </div>
+<hr>
 {% endfor %}
 
- 
+
 {% endblock content %}
 

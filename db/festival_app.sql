@@ -1,7 +1,7 @@
+DROP TABLE IF EXISTS users_festivals;
 DROP TABLE IF EXISTS festivals;
 DROP TABLE IF EXISTS countries;
 DROP TABLE IF EXISTS users;
-DROP TABLE IF EXISTS users_festivals;
 
 
 CREATE TABLE users (
@@ -20,13 +20,13 @@ CREATE TABLE countries (
 CREATE TABLE festivals (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
-    country_id INT REFERENCES countries(id)
+    country_id INT REFERENCES countries(id) ON DELETE CASCADE
 );
 
 CREATE TABLE users_festivals (
     id SERIAL PRIMARY KEY,
-    user_id INT REFERENCES users(id),
-    festival_id INT REFERENCES festivals(id)
+    user_id INT REFERENCES users(id) ON DELETE CASCADE,
+    festival_id INT REFERENCES festivals(id) ON DELETE CASCADE
 );
 
 
@@ -65,6 +65,7 @@ INSERT INTO festivals (name, country_id) VALUES ('Benicassim', 26);
 INSERT INTO festivals (name, country_id) VALUES ('Exit Festival', 29);
 INSERT INTO festivals (name, country_id) VALUES ('T In The Park', 28);
 INSERT INTO festivals (name, country_id) VALUES ('Lollapalooza', 11);
+INSERT INTO festivals (name, country_id) VALUES ('Glastonbury Festival', 28);
 
 INSERT INTO users (first_name, last_name, age) VALUES ('Mark', 'Burns', 33);
 INSERT INTO users (first_name, last_name, age) VALUES ('Heather', 'MacSween', 33);

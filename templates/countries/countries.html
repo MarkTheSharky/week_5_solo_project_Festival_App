@@ -4,19 +4,19 @@
 
 <!-- loop through countries and print name -->
 <!-- for each country find festivals that match id and print -->
-<div>
-    {% for country in countries %}
-    <div>
-        {{country.name}}
+<div class="countries_flexbox">
+    {% for festival in festivals %}
+    <div class="countries">
+        {{festival.country.name}}
         <div>
-            {% for festival in festivals %}
-                {% if country_id == something_something %}
-                    {{festival.name}}
-                {% endif %}
-            {% endfor %}
+            {% if festival.country.name == festival.country.name %}
+                {{festival.name}}
+            {% endif %}
         </div>
-    </div>    
+    </div>
     {% endfor %}
+    
 </div>
 
 {% endblock content %}
+

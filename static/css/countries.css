@@ -1,0 +1,10 @@
+.countries_flexbox {
+    display: flex;
+    flex-flow: row wrap;   
+}
+
+.countries {
+    background-color: coral;
+    height: 200px;
+    width: 150px;
+}

@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/countries.css') }}">
     <title>{{ title }}</title>
 </head>
 <body>
@@ -17,15 +19,15 @@
             </ul>
         </nav>
     </header>
-    <hr>
     <main>
+        <hr>
         {% block content %}
             
         {% endblock content %}
+        <hr>
     </main>
-    <hr>
     <footer>
-        <p class="footer_text">Thank you for visitng</p>
+        <p class="footer_text">Thank you for visiting</p>
     </footer>
 
 </body>
