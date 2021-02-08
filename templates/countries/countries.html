@@ -7,12 +7,13 @@
 <div class="countries_flexbox">
     {% for festival in festivals %}
     <div class="countries">
-        {{festival.country.name}}
+        <img class="poster_image" src="static/images/tinthepark_2008.jpeg" alt="TITP 2008 Line-up"><br>
         <div>
             {% if festival.country.name == festival.country.name %}
-                {{festival.name}}
+                <p class="festival_name">{{festival.name}}</p>
             {% endif %}
         </div>
+        <p>{{festival.country.name}}</p>
     </div>
     {% endfor %}
     

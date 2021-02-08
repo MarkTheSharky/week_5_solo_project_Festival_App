@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/countries.css') }}">
     <title>{{ title }}</title>
@@ -10,7 +14,7 @@
 <body>
 
     <header>
-        <h1>My Festivals</h1>
+        <h1 id="main_title">My Festivals</h1>
         <nav>
             <ul class="header_menu">
                 <li><a href="/users">Users</a></li>
