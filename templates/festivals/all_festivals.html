@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  
+<div>
+    <h1>Festival List</h1>
+    {% for festival in festivals %}
+        <p>{{festival.name}}</p>
+        <p>{{festival.country.name}}</p>
+        <hr>
+    {% endfor %}
+</div>
+
+{% endblock content %}

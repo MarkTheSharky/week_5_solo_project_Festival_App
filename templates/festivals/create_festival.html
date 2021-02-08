@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div>
+        <h3>Add A New Festival</h3>
+        <form action="/festivals" method="POST">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Festival" required autofocus>
+
+                <label for="country">Country:</label>
+                <select id="country" name=country_id>
+                    {% for country in countries %}
+                        <option value="{{country.id}}">{{country.name}}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit">Submit New Festival</button>
+            </div>
+        </form>
+    </div>
+
+{% endblock content %}
+

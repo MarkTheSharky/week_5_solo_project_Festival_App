@@ -1,6 +1,7 @@
 DROP TABLE IF EXISTS festivals;
 DROP TABLE IF EXISTS countries;
 DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS users_festivals;
 
 
 CREATE TABLE users (
@@ -21,6 +22,13 @@ CREATE TABLE festivals (
     name VARCHAR(255),
     country_id INT REFERENCES countries(id)
 );
+
+CREATE TABLE users_festivals (
+    id SERIAL PRIMARY KEY,
+    user_id INT REFERENCES users(id),
+    festival_id INT REFERENCES festivals(id)
+);
+
 
 
 INSERT INTO countries (name, country_code) VALUES ('Austria', 'AT');

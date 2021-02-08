@@ -45,4 +45,3 @@ print(user_repository.select_by_id(48).first_name)
 
 # festival_update1 = Festival("T In The Park", 'UK' )
 # festival_repository.update(festival_update1)
-
