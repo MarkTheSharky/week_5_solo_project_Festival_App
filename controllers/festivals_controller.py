@@ -34,6 +34,15 @@ def edit_festival(id):
     countries = country_repository.select_all()
     return render_template("festivals/edit_festival.html", festival=festival, countries=countries, title="Edit Festival")
 
+# FESTIVAL EDIT "POST"
+@festivals_blueprint.route("/festivals/<id>", methods=['POST'])
+def edit_festival_post(id):
+    name = request.form['name']
+    country = country_repository.select_by_id(request.form['country_id'])
+    festival = Festival(name, country, id)
+    festival_repository.update(festival)
+    return redirect("/festivals")
+
 
 
 
