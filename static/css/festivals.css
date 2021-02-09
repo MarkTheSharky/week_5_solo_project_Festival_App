@@ -1,0 +1,24 @@
+.festival_flexbox {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.festivals {
+    height: 250px;
+    width: 150px;
+    margin: 5px;
+}
+
+.poster_image {
+    width: 150px;
+}
+
+p {
+    margin: 0;
+}
+
+.festival_name {
+    font-weight: bolder;
+}

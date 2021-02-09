@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/countries.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/festivals.css') }}">
     <title>{{ title }}</title>
 </head>
 <body>
@@ -31,7 +32,14 @@
         <hr>
     </main>
     <footer>
-        <p class="footer_text">Thank you for visiting</p>
+        <span>
+            <p class="footer_text" id="footer_contact">Contact</p>
+            <p class="footer_text" id="footer_sitemap">Sitemap</p>
+            <p class="footer_text" id="footer_cookie">Cookie Policy</p>
+        </span>
+        <span>
+            <p class="footer_social_links">github linkdin</p>
+        </span>
     </footer>
 
 </body>

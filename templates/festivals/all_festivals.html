@@ -2,12 +2,13 @@
 
 {% block content %}
   
-<div>
-    <h1>Festival List</h1>
+<div class="festival_flexbox">
     {% for festival in festivals %}
-        <p>{{festival.name}}</p>
+    <div class="festivals">
+        <img class="poster_image" src="static/images/tinthepark_2008.jpeg" alt="TITP 2008 Line-up"><br>
+        <p class="festival_name">{{festival.name}}</p>
         <p>{{festival.country.name}}</p>
-        <hr>
+    </div>
     {% endfor %}
 </div>
 
