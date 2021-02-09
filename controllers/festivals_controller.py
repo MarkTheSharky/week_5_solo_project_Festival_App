@@ -42,3 +42,11 @@ def edit_festival_post(id):
     festival = Festival(name, country, id)
     festival_repository.update(festival)
     return redirect("/festivals")
+
+# INDEX
+# SHOW
+# NEW
+# CREATE
+# EDIT
+# UPDATE
+# DELETE

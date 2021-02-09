@@ -13,13 +13,6 @@ def users():
     users = user_repository.select_all()
     return render_template("users/users.html", users=users)
 
-# View user page
-# @users_blueprint.route("/users/<id>", methods=['GET'])
-# def user_page(id):
-#     user = user_repository.select_by_id(id)
-#     festivals = festival_repository.select_all()
-#     return render_template("/users/user.html", user=user, festivals=festivals)
-
 # NEW
 @users_blueprint.route("/users/new")
 def new_user():
