@@ -25,8 +25,34 @@ def users():
 def new_user():
     return render_template("users/new.html")
 
-
 # CREATE
+@users_blueprint.route("/users", methods=["POST"])
+def create_user():
+    first_name = request.form["first_name"]
+    last_name = request.form["last_name"]
+    age = request.form["age"]
+    user = User(first_name, last_name, age)
+    user_repository.save(user)
+    return redirect("/users")
+
 # EDIT
+@users_blueprint.route("/users/<id>/edit")
+def edit_user(id):
+    user = user_repository.select_by_id(id)
+    return render_template("users/edit.html", user=user)
+
 # UPDATE
+@users_blueprint.route("/users/<id>", methods=["POST"])
+def update_user(id):
+    first_name = request.form["first_name"]
+    last_name = request.form["last_name"]
+    age = request.form["age"]
+    user = User(first_name, last_name, age, id)
+    user_repository.update(user)
+    return redirect("/users")
+
 # DELETE
+@users_blueprint.route("/users/<id>/delete", methods=["POST"])
+def user_delete(id):
+    user_repository.delete_by_id(id)
+    return redirect("/users")
