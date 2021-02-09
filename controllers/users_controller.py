@@ -13,6 +13,8 @@ def users():
     users = user_repository.select_all()
     return render_template("users/users.html", users=users)
 
+# SHOW
+
 # NEW
 @users_blueprint.route("/users/new")
 def new_user():
