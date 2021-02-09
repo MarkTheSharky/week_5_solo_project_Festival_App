@@ -1,3 +1,8 @@
+.countries_grid {
+    display: grid;
+    grid-template-rows: 40px auto;
+}
+
 .countries_flexbox {
     display: flex;
     flex-flow: row wrap;
@@ -6,7 +11,6 @@
 }
 
 .countries {
-    background-color: coral;
     height: 250px;
     width: 150px;
     margin: 5px;
@@ -14,10 +18,6 @@
 
 .poster_image {
     width: 150px;
-}
-
-p {
-    margin: 0;
 }
 
 .festival_name {

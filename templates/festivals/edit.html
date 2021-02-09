@@ -4,7 +4,7 @@
     
     <div>
         <h3>Edit Festival</h3>
-        <form action="/festivals/{{festival.id}}" method="POST">
+        <form action="/festivals/{{festival.id}}/delete" method="POST">
             <label for="name">Festival Name:</label>
                 <input type="text" id="name" name="name" value="{{festival.name}}" required readonly>
             <select name="country_id" id="country">

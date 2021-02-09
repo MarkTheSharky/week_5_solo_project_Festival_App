@@ -1,16 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-
-{% for user in users %}
-<div>
-    <p>{{user.first_name}} {{user.last_name}}</p>
-    <p><a href="users/{{user.id}}">View Festivals Page</a></p>
+<div class="users_grid">
+    <div id="new_user_button">
+        <p class="top_row_buttons"><a href="/users/new" class="button">Create User</a></p>
+    </div>
+    <div class="users_flexbox">
+        {% for user in users %}
+        <div class="users">
+            <img class="poster_image" src="static/images/profile_placeholder.jpg" alt="Profile Picture Placeholder"><br>
+            <p>{{user.first_name}} {{user.last_name}}</p>
+            <p><a class="button" href="users/{{user.id}}">View User</a></p>
+            <p><a href="/users/{{user.id}}/edit" class="button">Update User</a></p>
+        </div>
+        {% endfor %}
+    </div>
 </div>
-<hr>
-{% endfor %}
-
-
 {% endblock content %}
 

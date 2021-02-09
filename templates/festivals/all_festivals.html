@@ -1,15 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  
-<div class="festival_flexbox">
-    {% for festival in festivals %}
-    <div class="festivals">
-        <img class="poster_image" src="static/images/tinthepark_2008.jpeg" alt="TITP 2008 Line-up"><br>
-        <p class="festival_name">{{festival.name}}</p>
-        <p>{{festival.country.name}}</p>
-    </div>
-    {% endfor %}
-</div>
+<div class="festival_grid">
+    <p class="top_row_buttons"><a href="/festivals/new" class="button">Create Festival</a></p>
 
+    <div class="festival_flexbox">
+        {% for festival in festivals %}
+        <div class="festivals">
+            <img class="poster_image" src="static/images/tinthepark_2008.jpeg" alt="TITP 2008 Line-up"><br>
+            <p class="festival_name">{{festival.name}}</p>
+            <p>{{festival.country.name}}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock content %}

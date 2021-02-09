@@ -1,3 +1,8 @@
+.festival_grid {
+    display: grid;
+    grid-template-rows: 40px auto;
+}
+
 .festival_flexbox {
     display: flex;
     flex-flow: row wrap;
@@ -15,9 +20,9 @@
     width: 150px;
 }
 
-p {
+/* p {
     margin: 0;
-}
+} */
 
 .festival_name {
     font-weight: bolder;

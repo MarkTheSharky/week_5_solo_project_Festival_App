@@ -1,0 +1,16 @@
+.users_grid {
+    display: grid;
+    grid-template-rows: 40px auto;
+}
+
+.users_flexbox {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.users {
+    height: 250px;
+    width: 150px;
+    margin: 5px;
+    background-color: tomato;
+}
