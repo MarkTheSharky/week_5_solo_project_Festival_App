@@ -18,7 +18,7 @@ def users():
 # NEW
 @users_blueprint.route("/users/new")
 def new_user():
-    return render_template("users/new.html")
+    return render_template("users/new.html", title="create users")
 
 # CREATE
 @users_blueprint.route("/users", methods=["POST"])

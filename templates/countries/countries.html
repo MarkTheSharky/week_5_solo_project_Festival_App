@@ -2,23 +2,18 @@
 
 {% block content %}
 
-<!-- loop through countries and print name -->
-<!-- for each country find festivals that match id and print -->
-<div class="countries_grid">
-    <p class="top_row_buttons"><a href="/countries/new" class="button">Create Country</a></p>
-    <div class="countries_flexbox">
-        {% for festival in festivals %}
-        <div class="countries">
-            <img class="poster_image" src="static/images/tinthepark_2008.jpeg" alt="TITP 2008 Line-up"><br>
-            <div>
-                {% if festival.country.name == festival.country.name %}
+{% for country in countries %}
+    <h3>{{country.name}}</h3>
+        <div class="countries_flexbox">
+            {% for festival in festivals %}
+                {% if festival.country.name == country.name %}
+                <div>
+                    <img class="poster_image" src="static/images/tinthepark_2008.jpeg" alt="TITP 2008 Line-up"><br>
                     <p class="festival_name">{{festival.name}}</p>
+                </div>
                 {% endif %}
-            </div>
-            <p>{{festival.country.name}}</p>
+            {% endfor %}
         </div>
-        {% endfor %}
-    </div>
-</div>
-{% endblock content %}
+{% endfor %}
 
+{% endblock content %}

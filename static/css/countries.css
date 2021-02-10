@@ -6,7 +6,7 @@
 .countries_flexbox {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: left;
     font-family: 'Montserrat', sans-serif;
 }
 

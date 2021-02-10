@@ -5,12 +5,13 @@
 
 .users_flexbox {
     display: flex;
-    flex-flow: wrap;
+    flex-flow: wrap;    
+    justify-content: center;
 }
 
 .users {
     height: 250px;
     width: 150px;
     margin: 5px;
-    background-color: tomato;
+    background-color: rgb(219, 219, 219);
 }

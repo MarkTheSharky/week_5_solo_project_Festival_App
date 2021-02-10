@@ -7,7 +7,6 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .festivals {
