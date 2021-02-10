@@ -17,7 +17,8 @@ def users():
 @users_blueprint.route("/users/<id>", methods=["GET"])
 def user(id):
     user = user_repository.select_by_id(id)
-    return render_template("users/user.html", user=user)
+    festivals = festival_repository.select_all()
+    return render_template("users/user.html", user=user, festivals=festivals)
 
 # NEW
 @users_blueprint.route("/users/new")
@@ -55,3 +56,4 @@ def update_user(id):
 def user_delete(id):
     user_repository.delete_by_id(id)
     return redirect("/users")
+

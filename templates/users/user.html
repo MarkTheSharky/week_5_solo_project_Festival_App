@@ -3,23 +3,34 @@
 {% block content %}
 
 <div>
-    <h2>{{user.first_name}} {{user.last_name}}</h2>
+    <h2>{{user.first_name}} {{user.last_name}}</h2> 
+    <p><a href="/users/{{user.id}}/edit" class="button">Update User Details</a></p>
 </div>
 
 <div>
-    <h4>Going To</h4>
-    {% for festival in festivals %}
-        <div>
-            <p>{{festival.name}}</p>
-        </div>
-    {% endfor %}
+    <h4>Interested</h4> 
+    <form action="/users" method="POST">
+        <label for="festivals_going">Add Festival To Interested</label>
+        <select name="festivals_going" id="festivals_going">
+            {% for festival in festivals %}
+                <option value="{{festival.id}}">{{festival.name}}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Add Festival To List">
+    </form>
 </div>
 
 <div>
-    <h4>Been To</h4>
+    <h4>Attended</h4>
+    <form action="/users" method="POST">
+        <label for="festivals_going">Add Festival To Attended</label>
+        <select name="festivals_been" id="festivals_been">
+            {% for festival in festivals %}
+                <option value="{{festival.id}}">{{festival.name}}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Add Festival To List">
+    </form>
 </div>
-
-<p><a href="/users/{{user.id}}/edit" class="button">Update User</a></p>
-
 
 {% endblock content %}
