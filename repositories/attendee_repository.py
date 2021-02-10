@@ -1,6 +1,6 @@
 from db.run_sql import run_sql
 
-from models.attendees import Attendee
+from models.attendee import Attendee
 
 import repositories.user_repository as user_repository
 import repositories.festival_repository as festival_repository

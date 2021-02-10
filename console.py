@@ -3,7 +3,7 @@ import pdb
 from models.country import Country
 from models.festival import Festival
 from models.user import User
-from models.attendees import Attendee
+from models.attendee import Attendee
 
 import repositories.country_repository as country_repository
 import repositories.festival_repository as festival_repository

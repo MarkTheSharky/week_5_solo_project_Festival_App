@@ -3,8 +3,3 @@ class Festival:
         self.name = name
         self.country = country
         self.id = id
-
-    # def add_festival():
-
-
-    # def 

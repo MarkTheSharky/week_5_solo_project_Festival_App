@@ -9,7 +9,7 @@
 
 <div>
     <h4>Interested</h4> 
-    <form action="/users" method="POST">
+    <form action="/users/{{user.id}}/going" method="POST">
         <label for="festivals_going">Add Festival To Interested</label>
         <select name="festivals_going" id="festivals_going">
             {% for festival in festivals %}
@@ -22,8 +22,8 @@
 
 <div>
     <h4>Attended</h4>
-    <form action="/users" method="POST">
-        <label for="festivals_going">Add Festival To Attended</label>
+    <form action="/users/{{user.id}}/been" method="POST">
+        <label for="festivals_been">Add Festival To Attended</label>
         <select name="festivals_been" id="festivals_been">
             {% for festival in festivals %}
                 <option value="{{festival.id}}">{{festival.name}}</option>

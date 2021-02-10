@@ -1,7 +1,7 @@
 from db.run_sql import run_sql
 
 from models.user import User
-from models.attendees import Attendee
+from models.attendee import Attendee
 from models.festival import Festival
 
 def save(user):
@@ -46,6 +46,7 @@ def update(user):
     sql = "UPDATE users SET (first_name, last_name, age) = (%s, %s, %s) WHERE id = %s"
     values = [user.first_name, user.last_name, user.age, user.id]
     run_sql(sql, values)
+
 
 def festivals(user):
     festivals = []
