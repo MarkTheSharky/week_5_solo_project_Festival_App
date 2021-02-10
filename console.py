@@ -3,10 +3,12 @@ import pdb
 from models.country import Country
 from models.festival import Festival
 from models.user import User
+from models.attendees import Attendee
 
 import repositories.country_repository as country_repository
 import repositories.festival_repository as festival_repository
 import repositories.user_repository as user_repository
+import repositories.attendee_repository as attendee_repository
 
 # festival_repository.delete_all()
 # country_repository.delete_all()
@@ -36,7 +38,7 @@ user_repository.save(user_2)
 # festival_repository.delete_by_id(3)
 
 # print(user_repository.select_all())
-print(user_repository.select_by_id(48).first_name)
+# print(user_repository.select_by_id(48).first_name)
 # user_repository.delete_by_id(2)
 
 
@@ -45,3 +47,17 @@ print(user_repository.select_by_id(48).first_name)
 
 # festival_update1 = Festival("T In The Park", 'UK' )
 # festival_repository.update(festival_update1)
+
+attendee1 = Attendee(user_1, festival_1)
+attendee_repository.save(attendee1)
+
+attendee2 = Attendee(user_1, festival_2)
+attendee_repository.save(attendee2)
+
+attendee3 = Attendee(user_2, festival_1)
+attendee_repository.save(attendee3)
+
+attendee4 = Attendee(user_2, festival_2)
+attendee_repository.save(attendee4)
+
+print(user_repository.festivals(user_1))

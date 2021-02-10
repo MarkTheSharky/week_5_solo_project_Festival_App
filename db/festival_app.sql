@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS users_festivals;
+DROP TABLE IF EXISTS attendees;
 DROP TABLE IF EXISTS festivals;
 DROP TABLE IF EXISTS countries;
 DROP TABLE IF EXISTS users;
@@ -23,7 +23,7 @@ CREATE TABLE festivals (
     country_id INT REFERENCES countries(id) ON DELETE CASCADE
 );
 
-CREATE TABLE users_festivals (
+CREATE TABLE attendees (
     id SERIAL PRIMARY KEY,
     user_id INT REFERENCES users(id) ON DELETE CASCADE,
     festival_id INT REFERENCES festivals(id) ON DELETE CASCADE

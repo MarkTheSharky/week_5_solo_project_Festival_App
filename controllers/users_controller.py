@@ -14,6 +14,10 @@ def users():
     return render_template("users/users.html", users=users)
 
 # SHOW
+@users_blueprint.route("/users/<id>", methods=["GET"])
+def user(id):
+    user = user_repository.select_by_id(id)
+    return render_template("users/user.html", user=user)
 
 # NEW
 @users_blueprint.route("/users/new")
