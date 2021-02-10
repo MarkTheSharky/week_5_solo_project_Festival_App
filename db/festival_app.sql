@@ -111,7 +111,16 @@ INSERT INTO festivals (name, country_id) VALUES ('Kappa FuturFestival', 15);
 
 
 INSERT INTO users (first_name, last_name, age) VALUES ('Mark', 'Burns', 33);
-INSERT INTO users (first_name, last_name, age) VALUES ('Heather', 'MacSween', 33);
-INSERT INTO users (first_name, last_name, age) VALUES ('Stewart', 'McGowan', 33);
-INSERT INTO users (first_name, last_name, age) VALUES ('Matt', 'Mclister', 33);
-INSERT INTO users (first_name, last_name, age) VALUES ('Kerr', 'McAndrew', 33);
+INSERT INTO users (first_name, last_name, age) VALUES ('Alex', 'Rabisse', 30);
+INSERT INTO users (first_name, last_name, age) VALUES ('Andrew', 'Hunter', 30);
+INSERT INTO users (first_name, last_name, age) VALUES ('Brian', 'Bell', 30);
+INSERT INTO users (first_name, last_name, age) VALUES ('Chris', 'Dryden', 30);
+INSERT INTO users (first_name, last_name, age) VALUES ('David', 'Taylor', 30);
+INSERT INTO users (first_name, last_name, age) VALUES ('Harrison', 'Booth', 30);
+INSERT INTO users (first_name, last_name, age) VALUES ('James', 'Beedle', 30);
+INSERT INTO users (first_name, last_name, age) VALUES ('Jan', 'Metelski', 30);
+INSERT INTO users (first_name, last_name, age) VALUES ('Jenny', 'Bulford', 30);
+INSERT INTO users (first_name, last_name, age) VALUES ('Katie', 'Jeffree', 30);
+INSERT INTO users (first_name, last_name, age) VALUES ('Malcolm', 'Holwill', 30);
+INSERT INTO users (first_name, last_name, age) VALUES ('Nicola', 'Simpson', 30);
+INSERT INTO users (first_name, last_name, age) VALUES ('Simon', 'Elsmie', 30);

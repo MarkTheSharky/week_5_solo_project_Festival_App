@@ -4,6 +4,7 @@ from models.festival import Festival
 
 import repositories.user_repository as user_repository
 import repositories.festival_repository as festival_repository
+import repositories.attendee_repository as attendee_repository
 
 users_blueprint = Blueprint("users", __name__)
 
@@ -18,7 +19,8 @@ def users():
 def user(id):
     user = user_repository.select_by_id(id)
     festivals = festival_repository.select_all()
-    return render_template("users/user.html", user=user, festivals=festivals)
+    attendees = attendee_repository.select_all()
+    return render_template("users/user.html", user=user, festivals=festivals, attendees=attendees)
 
 # NEW
 @users_blueprint.route("/users/new")

@@ -20,9 +20,3 @@ def add_festival_to_going(id):
     attendee = Attendee(user, festival)
     attendee_repository.save(attendee)
     return redirect("/users")
-
-
-# @attendees_blueprint.route("/users/<id>/been", methods=['POST'])
-# def add_festival_to_been(id):
-
-#     return redirect("/users/<id>")
